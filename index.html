@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <container class="wrapper">
+      <div class="staff form">
+        <div class="noteFlex">
+          <div class="bar">
+            <div class="noteSlot"></div>
+          </div>
+        </div>
+        <div id="tempoLine"></div>
+      </div>
+      <div class="controls form">
+        <button id="tempoButton">Start</button>
+        <input type="range" id="bpmRange" min="20" max="1000" />
+        <input type="number" id="bpmNumber" min="20" max="1000" />
+        <div class="signatures">
+          <label>How Many Notes</label>
+          <input type="number" id="howManyNotes" min="1" max="17" value="1" />
+          <br />
+          <label>What Type Of Notes</label>
+          <button>1</button>
+          <button>2</button>
+          <button>4</button>
+          <button>8</button>
+          <button>16</button>
+        </div>
+
+        <div class="fractions">
+          <p>1</p>
+          <hr />
+          <p>1</p>
+        </div>
+      </div>
+    </container>
+    <script src="index.js"></script>
+  </body>
+</html>
