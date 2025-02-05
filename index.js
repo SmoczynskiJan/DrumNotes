@@ -80,36 +80,36 @@ howManyNotes.addEventListener("change", (event) => {
 });
 
 
-//create note grid
-function createNoteGrid(){
-
-
-
-	for (let i = 0; i < 16; i++) {
-		let noteFlex = document.querySelector(".noteFlex")
-        let bar = document.createElement("div");
-        bar.classList.add("bar");
-		(i===15)?bar.classList.add("metrumBrake"):"";
-        
-        for (let j = 0; j < 11; j++) {
-            let innerDiv = document.createElement("div");
-            bar.appendChild(innerDiv);
-        }
-        
-        noteFlex.appendChild(bar);
-    }
+//function create note grid
+function createNoteGrid(metrum){
+	for(x=0;x<metrum;x++){
+		for (let i = 0; i < 16; i++) {
+			let noteFlex = document.querySelector(".noteFlex")
+			let bar = document.createElement("div");
+			bar.classList.add("bar");
+			(i===15)?bar.classList.add("metrumBrake"):"";
+			
+			for (let j = 0; j < 11; j++) {
+				let innerDiv = document.createElement("div");
+				bar.appendChild(innerDiv);
+			}
+			
+			noteFlex.appendChild(bar);
+		}
+	}
 }
+//create grid 11
+createNoteGrid(11);
 
-createNoteGrid();
+//cursor note flag
 
-//get typeOfNotes
-// for(button of typeOfNotes){
-//     button.addEventListener("click",(event) =>{
-//         let typeOfNotesValue = typeOfNotes[i].innerHTML;
-//         console.log(typeOfNotesValue);
-//     })}
+let noteflag = 0;
 
-//create flexs
-// let div = document.createElement("div");
-	// div.classList.add("line");
-	// document.querySelector(".staff").appendChild(div);
+//assign note on click
+
+function assignNote(note){
+	noteflag=note;
+}
+let noteBtn = document.querySelectorAll(".noteBtn");
+console.log("noteBtn "+noteBtn);
+console.log(noteflag);

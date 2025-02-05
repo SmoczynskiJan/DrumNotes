@@ -64,16 +64,16 @@ body {
   width: 1rem;
 }
 .bar > div {
-  width: 100%;
   height: calc(100% / 11);
   box-sizing: border-box;
-  background: rgb(0, 0, 0);
-  background: radial-gradient(
-    circle,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(143, 165, 191, 1) 14%,
-    rgba(143, 165, 191, 0) 63%
-  );
+  background-color: blueviolet;
+  border-radius: 50%;
+  border: 1px solid black;
+  opacity: 0.3;
+  position: relative;
+}
+.bar > div:hover {
+  opacity: 1;
 }
 .fractions > p {
   all: unset;
