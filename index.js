@@ -36,7 +36,7 @@ bpmInputField.addEventListener("change", (event) => {
 });
 
 
-
+//start stop tempo line
 tempoButton.addEventListener("click", (event) => {
 	if(lineFlag ==0){
 		moveTempoLine(lineFlag);
@@ -51,6 +51,7 @@ tempoButton.addEventListener("click", (event) => {
         }
 });
 
+//move tempoline
 function moveTempoLine(Flag){
 	var bpm = bpmValue+"s"
 	var leftDistance = (Flag ==0)?"100%":"0%";
@@ -78,16 +79,37 @@ howManyNotes.addEventListener("change", (event) => {
     document.querySelector("p").innerHTML=howManyNotesValue;
 });
 
-//get typeOfNotes
-// for(button of typeOfNotes){
-//     button.addEventListener("click",(event) =>{
-//         let typeOfNotesValue = typeOfNotes[i].innerHTML;
-//         console.log(typeOfNotesValue);
-//     })}
 
-function OnClick(event){console.log(event)}
+//function create note grid
+function createNoteGrid(metrum){
+	for(x=0;x<metrum;x++){
+		for (let i = 0; i < 16; i++) {
+			let noteFlex = document.querySelector(".noteFlex")
+			let bar = document.createElement("div");
+			bar.classList.add("bar");
+			(i===15)?bar.classList.add("metrumBrake"):"";
+			
+			for (let j = 0; j < 11; j++) {
+				let innerDiv = document.createElement("div");
+				bar.appendChild(innerDiv);
+			}
+			
+			noteFlex.appendChild(bar);
+		}
+	}
+}
+//create grid 11
+createNoteGrid(11);
 
-//create flexs
-// let div = document.createElement("div");
-	// div.classList.add("line");
-	// document.querySelector(".staff").appendChild(div);
+//cursor note flag
+
+let noteflag = 0;
+
+//assign note on click
+
+function assignNote(note){
+	noteflag=note;
+}
+let noteBtn = document.querySelectorAll(".noteBtn");
+console.log("noteBtn "+noteBtn);
+console.log(noteflag);
