@@ -99,7 +99,7 @@ function createNoteGrid(metrum){
 	}
 }
 //create grid 11
-createNoteGrid(11);
+createNoteGrid(2);
 
 //cursor note flag
 
@@ -111,5 +111,21 @@ function assignNote(note){
 	noteflag=note;
 }
 let noteBtn = document.querySelectorAll(".noteBtn");
-console.log("noteBtn "+noteBtn);
-console.log(noteflag);
+let noteBtnLength = noteBtn.length;
+const noteMatrix=[
+	[1,2,4,8,16],
+	["wholeNote","halfNote","quarterNote","eightNote","sixteenthNote"]]
+for(i=0;i<noteBtnLength;i++){
+	noteBtn[i].addEventListener("click", (event) => {
+		let matruxValueNumber=(noteMatrix[1].findIndex((note)=>{return note===event.currentTarget.id}));
+		let idToValue = noteMatrix[0][matruxValueNumber];
+		noteflag=idToValue;
+		
+		let bgColor = event.currentTarget.style.backgroundColor;
+		console.log(bgColor)
+
+	})
+}
+
+
+
