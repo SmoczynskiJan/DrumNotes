@@ -6,106 +6,17 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body onresize="getWith()">
     <container class="wrapper">
-      <div class="bentoBox control" style="grid-area: box1">
+      <div class="bentoBox control" style="grid-area: box1">metronom/tempo</div>
+      <div class="bentoBox control" style="grid-area: box2">
+        strat/stop
         <button id="starLine" onclick="lineControl()">Start</button>
-        metronom/tempo
       </div>
-      <div class="bentoBox control" style="grid-area: box2">strat/stop</div>
       <div class="bentoBox control" style="grid-area: box3">control</div>
       <div class="bentoBox lines" style="grid-area: box4">
         <div id="noteLine"></div>
-        <div class="noteLines">
-          <div class="testDiv">1</div>
-          <div class="testDiv">2</div>
-          <div class="testDiv">3</div>
-          <div class="testDiv">4</div>
-          <div class="testDiv">5</div>
-          <div class="testDiv">6</div>
-          <div class="testDiv">7</div>
-          <div class="testDiv">8</div>
-          <div class="testDiv">9</div>
-          <div class="testDiv">10</div>
-          <div class="testDiv">11</div>
-          <div class="testDiv">12</div>
-          <div class="testDiv">13</div>
-          <div class="testDiv">14</div>
-          <div class="testDiv">15</div>
-          <div class="testDiv">16</div>
-          <div class="testDiv">17</div>
-          <div class="testDiv">18</div>
-          <div class="testDiv">19</div>
-          <div class="testDiv">20</div>
-          <div class="testDiv">21</div>
-          <div class="testDiv">22</div>
-          <div class="testDiv">23</div>
-          <div class="testDiv">24</div>
-          <div class="testDiv">25</div>
-          <div class="testDiv">26</div>
-          <div class="testDiv">27</div>
-          <div class="testDiv">28</div>
-          <div class="testDiv">29</div>
-          <div class="testDiv">30</div>
-          <div class="testDiv">31</div>
-          <div class="testDiv">32</div>
-          <div class="testDiv">33</div>
-          <div class="testDiv">34</div>
-          <div class="testDiv">35</div>
-          <div class="testDiv">36</div>
-          <div class="testDiv">37</div>
-          <div class="testDiv">38</div>
-          <div class="testDiv">39</div>
-          <div class="testDiv">40</div>
-          <div class="testDiv">41</div>
-          <div class="testDiv">42</div>
-          <div class="testDiv">43</div>
-          <div class="testDiv">44</div>
-          <div class="testDiv">45</div>
-          <div class="testDiv">46</div>
-          <div class="testDiv">47</div>
-          <div class="testDiv">48</div>
-          <div class="testDiv">49</div>
-          <div class="testDiv">50</div>
-          <div class="testDiv">51</div>
-          <div class="testDiv">52</div>
-          <div class="testDiv">53</div>
-          <div class="testDiv">54</div>
-          <div class="testDiv">55</div>
-          <div class="testDiv">56</div>
-          <div class="testDiv">57</div>
-          <div class="testDiv">58</div>
-          <div class="testDiv">59</div>
-          <div class="testDiv">60</div>
-          <div class="testDiv">61</div>
-          <div class="testDiv">62</div>
-          <div class="testDiv">63</div>
-          <div class="testDiv">64</div>
-          <div class="testDiv">65</div>
-          <div class="testDiv">66</div>
-          <div class="testDiv">67</div>
-          <div class="testDiv">68</div>
-          <div class="testDiv">69</div>
-          <div class="testDiv">70</div>
-          <div class="testDiv">71</div>
-          <div class="testDiv">72</div>
-          <div class="testDiv">73</div>
-          <div class="testDiv">74</div>
-          <div class="testDiv">75</div>
-          <div class="testDiv">76</div>
-          <div class="testDiv">77</div>
-          <div class="testDiv">78</div>
-          <div class="testDiv">79</div>
-          <div class="testDiv">80</div>
-          <div class="testDiv">81</div>
-          <div class="testDiv">82</div>
-          <div class="testDiv">83</div>
-          <div class="testDiv">84</div>
-          <div class="testDiv">85</div>
-          <div class="testDiv">86</div>
-          <div class="testDiv">87</div>
-          <div class="testDiv">88</div>
-        </div>
+        <div class="noteLines"></div>
       </div>
     </container>
     <script src="index.js"></script>

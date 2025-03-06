@@ -22,10 +22,11 @@ body {
 }
 #noteLine {
   position: absolute;
-  background-color: darkblue;
+  background-color: red;
   height: 100%;
   width: 3px;
   margin-left: 0%;
+  transition: 5s linear;
 }
 .noteLines {
   border-radius: 1rem;
@@ -33,13 +34,12 @@ body {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(11, 1fr);
-  min-height: 100vph;
   height: 100%;
 }
-.testDiv {
+.noteLines > div {
   text-align: center;
 }
-.testDiv:hover {
+.noteLines > div:hover {
   background-color: blue;
 }
 .control {
