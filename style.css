@@ -1,24 +1,25 @@
 body {
   background-color: rgb(23, 23, 23);
-  min-height: 100vph;
-  min-width: 100vpw;
   padding: 2%;
 }
 .wrapper {
-  min-width: 100vpw;
-  min-height: 50vph;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(2, 200px);
+  grid-template-rows: 1fr 2fr;
   gap: 1em;
   grid-template-areas:
     "box1 box1 box2 box3 box3"
     "box4 box4 box4 box4 box4";
 }
 .bentoBox {
+  overflow: hidden;
   border-radius: 1rem;
   background-color: cadetblue;
   position: relative;
+}
+.noteLineWrapper {
+  display: flex;
+  overflow: hidden;
 }
 #noteLine {
   position: absolute;
@@ -28,15 +29,20 @@ body {
   margin-left: 0%;
   transition: 5s linear;
 }
+.noteLines:not(:last-child) {
+  border-right: solid black 4px;
+}
 .noteLines {
-  border-radius: 1rem;
-  overflow: hidden;
+  flex: 1 1 100%;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(11, 1fr);
-  height: 100%;
 }
 .noteLines > div {
+  border-radius: 5px;
+  height: 15px;
+  box-sizing: border-box;
+  border: 1px indigo inset;
   text-align: center;
 }
 .noteLines > div:hover {
